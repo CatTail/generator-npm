@@ -98,8 +98,6 @@ NpmGenerator.prototype.projectFiles = function() {
 
     done();
   }.bind(this));
-
-  //this.copy('Gruntfile.js', 'Gruntfile.js');
 };
 
 NpmGenerator.prototype.git = function () {
