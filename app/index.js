@@ -104,4 +104,5 @@ NpmGenerator.prototype.projectFiles = function() {
 
 NpmGenerator.prototype.git = function () {
   this.copy('gitignore', '.gitignore');
+  this.copy('githooks', '.githooks');
 };

@@ -1,6 +1,6 @@
 {
   "name": "generator-npm",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Yeoman generator for npm package",
   "keywords": [
     "yeoman-generator"
@@ -10,7 +10,7 @@
     "url": "https://github.com/CatTail/generator-npm/issues"
   },
   "author": {
-    "name": "zhongchiyu",
+    "name": "cattail",
     "email": "zhongchiyu@gmail.com",
     "url": "http://cattail.me"
   },
