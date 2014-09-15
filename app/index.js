@@ -61,7 +61,6 @@ NpmGenerator.prototype.askFor = function askFor() {
 };
 
 NpmGenerator.prototype.app = function app() {
-  this.mkdir('lib');
   this.mkdir('test');
 };
 
