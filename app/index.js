@@ -2,14 +2,11 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
+var npm = require('npm');
 
 
 var NpmGenerator = module.exports = function NpmGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
-
-  //this.on('end', function () {
-    //this.installDependencies({ skipInstall: options['skip-install'] });
-  //});
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
@@ -91,10 +88,14 @@ NpmGenerator.prototype.projectFiles = function() {
       description: this.packageDesc,
       licenses: this.packageLicense
     };
-    this.template('package.json', 'package.json', data);
     this.template('README.md', 'README.md', data);
+    // init package.json
+    npm.load(function() {
+        npm.commands.init(function() {
+            done();
+        });
+    });
 
-    done();
   }.bind(this));
 };
 
